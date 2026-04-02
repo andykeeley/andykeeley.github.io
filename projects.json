@@ -21,7 +21,7 @@
       "effort": { "score": 4, "tip": "weekends + evenings over ~3 weeks" },
       "value": { "score": 5, "tip": "it literally trades for me" },
       "usage": { "score": 5, "tip": "runs autonomously every day" },
-      "link": { "label": "github →", "url": "https://github.com/andykeeley/investment-agent" },
+      "link": null,
       "image": null
     },
     {
