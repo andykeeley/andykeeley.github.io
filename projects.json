@@ -1,0 +1,158 @@
+{
+  "site": {
+    "title": "andy's builds",
+    "tagline": "things i've made with claude code",
+    "name": "Andy Keeley",
+    "role": "CCO at a travel tech company",
+    "email": "andy@example.com",
+    "github": "https://github.com/andykeeley",
+    "updated": "april 2026"
+  },
+  "intro": "I started using Claude Code to scratch my own itches — automating work stuff, tracking health data, managing investments. Somewhere along the way I realised I'd accidentally built a portfolio. Everything below was built by describing what I wanted in plain English. I've never written a line of code by hand.",
+  "projects": [
+    {
+      "id": "investment-agent",
+      "name": "investment-agent",
+      "emoji": "📈",
+      "status": "live",
+      "statusLabel": "live on Railway",
+      "description": "Autonomous trading agent. AI-scores opportunities across stocks, crypto, and options. Executes paper trades via IBKR and Kraken Pro. Daily email digest of decisions and portfolio state.",
+      "tags": ["python", "railway", "ibkr api", "kraken pro", "resend"],
+      "effort": { "score": 4, "tip": "weekends + evenings over ~3 weeks" },
+      "value": { "score": 5, "tip": "it literally trades for me" },
+      "usage": { "score": 5, "tip": "runs autonomously every day" },
+      "link": { "label": "github →", "url": "https://github.com/andykeeley/investment-agent" },
+      "image": null
+    },
+    {
+      "id": "health-tracker",
+      "name": "health-tracker",
+      "emoji": "🫀",
+      "status": "live",
+      "statusLabel": "running daily",
+      "description": "Correlates alcohol intake with Garmin biometrics — resting HR, HRV, sleep score. Streak analysis, dose-response curves, trend charts. Guilt-as-a-service.",
+      "tags": ["web app", "garmin api", "data viz"],
+      "effort": { "score": 2, "tip": "surprisingly quick to build" },
+      "value": { "score": 5, "tip": "actually changed my behaviour" },
+      "usage": { "score": 4, "tip": "check it most mornings" },
+      "link": null,
+      "image": null
+    },
+    {
+      "id": "customer-health-dashboard",
+      "name": "customer-health-dashboard",
+      "emoji": "📊",
+      "status": "active",
+      "statusLabel": "in use at work",
+      "description": "Reads CCO Hub exports and aged debt reports. Generates weighted health scores across the customer portfolio. Full HTML dashboard. Replaced a process that took hours.",
+      "tags": ["python", "excel parsing", "html dashboard"],
+      "effort": { "score": 3, "tip": "a couple of afternoons" },
+      "value": { "score": 4, "tip": "use it in every board pack" },
+      "usage": { "score": 3, "tip": "monthly, when reports land" },
+      "link": null,
+      "image": null
+    },
+    {
+      "id": "ar-collections-copilot",
+      "name": "ar-collections-copilot",
+      "emoji": "💷",
+      "status": "active",
+      "statusLabel": "in use at work",
+      "description": "AI agent for chasing aged debt. Prioritises accounts, suggests chasing cadences, handles escalation paths. Goal: 60-day debtor ratio from ~40% → <10%.",
+      "tags": ["prompt engineering", "finance", "automation"],
+      "effort": { "score": 2, "tip": "mostly prompt work" },
+      "value": { "score": 4, "tip": "debt ratio already improving" },
+      "usage": { "score": 3, "tip": "weekly debt review sessions" },
+      "link": null,
+      "image": null
+    },
+    {
+      "id": "hotel-booking-app",
+      "name": "hotel-booking-app",
+      "emoji": "🏨",
+      "status": "shipped",
+      "statusLabel": "shipped",
+      "description": "Full-stack booking app built on the iVectorOne Universal Hotel API. Built to demo Claude Code to our engineering team. Their reaction was the whole point.",
+      "tags": ["react", "vite", "node.js", "sqlite", "rest api"],
+      "effort": { "score": 5, "tip": "my first real build, steep learning curve" },
+      "value": { "score": 4, "tip": "proved the concept to the team" },
+      "usage": { "score": 1, "tip": "served its purpose, archived" },
+      "link": null,
+      "image": null
+    },
+    {
+      "id": "exercise-coach",
+      "name": "exercise-coach",
+      "emoji": "🏋️",
+      "status": "live",
+      "statusLabel": "active",
+      "description": "Multi-mode training agent with full athlete profile and training history. Four modes: LOG, REVIEW, PLAN, CHECK. Migrated from ChatGPT into Claude Code.",
+      "tags": ["claude code", "agent", "training data"],
+      "effort": { "score": 3, "tip": "migration took a couple of sessions" },
+      "value": { "score": 4, "tip": "saves me coaching fees" },
+      "usage": { "score": 5, "tip": "every training session" },
+      "link": null,
+      "image": null
+    },
+    {
+      "id": "mentor-agent",
+      "name": "mentor-agent",
+      "emoji": "🧠",
+      "status": "live",
+      "statusLabel": "daily driver",
+      "description": "Personal Claude Code agent. GTD/EOS file structure, Google Calendar and Gmail via MCP, knowledge layer, and a Deal Prep mode for commercial negotiations. The hub everything else connects to.",
+      "tags": ["claude code", "mcp", "gcal", "gmail", "gtd"],
+      "effort": { "score": 5, "tip": "ongoing — always evolving" },
+      "value": { "score": 5, "tip": "genuinely can't work without it now" },
+      "usage": { "score": 5, "tip": "every single work day" },
+      "link": null,
+      "image": null
+    },
+    {
+      "id": "agent-launcher",
+      "name": "agent-launcher",
+      "emoji": "🚀",
+      "status": "active",
+      "statusLabel": "in use",
+      "description": "Central hub for all agents. Spawns isolated sessions via tmux. One command to get to anything.",
+      "tags": ["claude code", "tmux", "session mgmt"],
+      "effort": { "score": 1, "tip": "half an afternoon" },
+      "value": { "score": 3, "tip": "small but essential glue" },
+      "usage": { "score": 5, "tip": "every time i open a terminal" },
+      "link": null,
+      "image": null
+    }
+  ],
+  "backlog": [
+    {
+      "title": "Client onboarding automator",
+      "description": "Auto-generate implementation timelines, contract checklists, and welcome packs from CRM data",
+      "tag": "work"
+    },
+    {
+      "title": "Competitor pricing monitor",
+      "description": "Scrape and compare hotel pricing across OTAs, surface anomalies, alert on significant shifts",
+      "tag": "work"
+    },
+    {
+      "title": "Family meal planner",
+      "description": "Weekly meal plans based on dietary preferences, generates shopping lists, syncs with calendar",
+      "tag": "personal"
+    },
+    {
+      "title": "Meeting prep agent",
+      "description": "Pull context from calendar, emails, and notes before each meeting. Surface talking points and outstanding actions",
+      "tag": "work"
+    },
+    {
+      "title": "Kid's coding curriculum builder",
+      "description": "Structured programming lessons that build toward game modding, auto-adapts to progress",
+      "tag": "personal"
+    }
+  ],
+  "notes": [
+    "I'm a CCO, not a developer. My background is commercial — ARR growth, account management, contract negotiations. I started building because I had problems nobody else was going to solve.",
+    "Every project here was built by describing what I wanted to Claude Code in plain English, iterating on the output, and deploying. The stack listed on each card is what Claude Code chose, not what I specified.",
+    "If you've got a problem that feels like it should be software but you don't have developers to build it — [get in touch](mailto:andy@example.com). I might be able to help."
+  ]
+}
