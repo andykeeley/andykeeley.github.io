@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "andy's builds",
-    "tagline": "things i've made with claude code",
+    "title": "stuff i made",
+    "tagline": "things i've built with claude code",
     "name": "Andy Keeley",
-    "role": "CCO at a travel tech company",
-    "email": "andy@example.com",
+    "role": "CCO at a travel tech company · not a developer",
+    "email": "andy.keeley@test.com",
     "github": "https://github.com/andykeeley",
     "updated": "april 2026"
   },
-  "intro": "I started using Claude Code to scratch my own itches — automating work stuff, tracking health data, managing investments. Somewhere along the way I realised I'd accidentally built a portfolio. Everything below was built by describing what I wanted in plain English. I've never written a line of code by hand.",
+  "intro": "I started using Claude Code in Feb-26. I working in a tech company, but i'm the commercial guy. I understand the ecosystem, but have never written a line of code.\n\nI can't stop building value-adding and life-enhancing solutions - automating work stuff, tracking health data, managing investments, entertaining my kids. Here's my portfolio so far.",
   "projects": [
     {
       "id": "investment-agent",
@@ -153,6 +153,6 @@
   "notes": [
     "I'm a CCO, not a developer. My background is commercial — ARR growth, account management, contract negotiations. I started building because I had problems nobody else was going to solve.",
     "Every project here was built by describing what I wanted to Claude Code in plain English, iterating on the output, and deploying. The stack listed on each card is what Claude Code chose, not what I specified.",
-    "If you've got a problem that feels like it should be software but you don't have developers to build it — [get in touch](mailto:andy@example.com). I might be able to help."
+    "If you've got a problem that feels like it should be software but you don't have developers to build it — [get in touch](mailto:andy.keeley@test.com). I might be able to help."
   ]
 }
