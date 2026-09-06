@@ -8,7 +8,7 @@
     "github": "https://github.com/andykeeley",
     "updated": "september 2026"
   },
-  "intro": "I started using Claude Code in Feb-26. I work in a tech company, but i'm the commercial guy. I understand the ecosystem, but have never written a line of code.\n\nSeven months later, there are sixteen things on this page. One runs my working week. One trades real money every day without asking me. One is a maths game my nine-year-olds actually ask to play. They were all built the same way: describe the problem properly, argue with the output until it's right, ship it, then keep using it until it breaks.\n\nThe hard part was never the code.",
+  "intro": "I started using Claude Code in Feb-26. I work in a tech company, but i'm the commercial guy. I understand the ecosystem, but have never written a line of code.\n\nSeven months later, there are seventeen things on this page. One runs my working week. One trades real money every day without asking me. One is a maths game my nine-year-olds actually ask to play. They were all built the same way: describe the problem properly, argue with the output until it's right, ship it, then keep using it until it breaks.\n\nThe hard part was never the code.",
   "projects": [
     {
       "id": "mentor-agent",
@@ -35,6 +35,35 @@
       "usage": {
         "score": 5,
         "tip": "every single work day"
+      },
+      "link": null,
+      "image": null
+    },
+    {
+      "id": "school-brain",
+      "name": "sorry-quick-q",
+      "emoji": "🎒",
+      "status": "live",
+      "statusLabel": "in use at home",
+      "description": "A knowledge base built from the boys' school comms — letters, newsletters, WhatsApp forwards, photos of a noticeboard — answering \"what kit does he need Thursday?\" at 7am, instead of asking the group chat. School comms constantly overwrite themselves, so nothing is ever deleted: new facts supersede old ones, but only if the source outranks what it replaces — a parent's forward can't retire the school's own letter. Citations resolve by ID so the model can't invent a source, and \"I don't know\" is a first-class answer.",
+      "tags": [
+        "next.js",
+        "typescript",
+        "claude api",
+        "rag",
+        "clerk auth"
+      ],
+      "effort": {
+        "score": 4,
+        "tip": "two repos, and a week of arguing about supersession"
+      },
+      "value": {
+        "score": 5,
+        "tip": "answers it before i have to ask the group chat"
+      },
+      "usage": {
+        "score": 4,
+        "tip": "most school mornings"
       },
       "link": null,
       "image": null
