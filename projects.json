@@ -5,10 +5,14 @@
     "name": "Andy Keeley",
     "role": "commercial leader · not a developer",
     "email": "andy.keeley@gmail.com",
-    "github": "https://github.com/andykeeley",
     "updated": "17 september 2026"
   },
   "intro": "I'm a commercial leader, not a developer. In February I started building with Claude Code, on the view that the tools had quietly become good enough for someone who understands the problem to build the fix themselves. Seven months on, some of it runs my working week and some of it runs the house. Most of it I use every day. The hard part was never the code. It was describing the problem properly, arguing with the output until it was right, and then actually using it.\n\nAt home, my kids have worked out that if they can describe it, we can build it.",
+  "introAside": "And, of course, this website was built in a couple of hours with a dollop of vision and a few good prompts.",
+  "leadIn": {
+    "title": "things I've built",
+    "line": "Tap any card to see how it works, with screenshots."
+  },
   "meterKey": "effort = how long it took to build · value = what it's worth to me · usage = how often it's used",
   "projects": [
     {
@@ -18,7 +22,7 @@
       "tag": "work",
       "status": "live",
       "statusLabel": "daily use",
-      "strapline": "Not a chatbot. A system: my inbox, calendar, pipeline and customer files, organised so AI can actually run my week with me.",
+      "strapline": "A chief of staff with an IQ of 140, sitting on my shoulder.",
       "bullets": [
         "Connected to Gmail, Google Calendar and the EOS rocks store",
         "Structured memory in plain files: a handover from the last session, a lessons file of its own mistakes, GTD, the pipeline, one file per customer, a knowledge base and a daily journal",
@@ -26,7 +30,7 @@
         "Rituals it runs with me: every morning, every Friday, and before every negotiation",
         "What comes out: today's plan, deal prep briefs, drafts, boards and design briefs"
       ],
-      "outcome": "Nothing gets dropped, and every hard conversation starts prepared.",
+      "outcome": "Not a chatbot. A system that knows my inbox, calendar, pipeline and customers.",
       "tags": [
         "claude code",
         "mcp",
@@ -60,7 +64,7 @@
       "tag": "home",
       "status": "live",
       "statusLabel": "in use at home",
-      "strapline": "The answer to \"what kit does he need on Thursday?\" at 7am, without asking the group chat.",
+      "strapline": "Every school letter, newsletter, WhatsApp forward and noticeboard photo in one deployed AI. Ask it anything.",
       "description": "A knowledge base built from the boys' school comms — letters, newsletters, WhatsApp forwards, photos of a noticeboard — answering \"what kit does he need Thursday?\" at 7am, instead of asking the group chat. School comms constantly overwrite themselves, so nothing is ever deleted: new facts supersede old ones, but only if the source outranks what it replaces — a parent's forward can't retire the school's own letter. Citations resolve by ID so the model can't invent a source, and \"I don't know\" is a first-class answer.",
       "tags": [
         "next.js",
@@ -82,7 +86,9 @@
         "tip": "most school mornings"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/sorry-quick-q-1.png"
+      ]
     },
     {
       "id": "investment-agent",
@@ -91,7 +97,7 @@
       "tag": "home",
       "status": "live",
       "statusLabel": "live · real money",
-      "strapline": "A trading agent with rules it can't talk itself out of, running on real money.",
+      "strapline": "An autonomous trading agent, live on Kraken with real money, whose rules are rewritten from its own trade history.",
       "description": "Autonomous trading agent. Scans the crypto market, scores candidates on momentum, sentiment, risk/reward and liquidity, sizes the position through a risk manager, executes on Kraken, and emails me a daily digest of what it did and why. The interesting part isn't the trading — it's the rules it can't talk itself out of: stop-loss set at entry, a hard cash floor, a maximum hold it has to re-underwrite. Runs unattended.",
       "tags": [
         "python",
@@ -115,6 +121,13 @@
       "link": null,
       "images": [
         "images/investment-agent.png"
+      ],
+      "bullets": [
+        "Scans the Kraken market and scores every candidate on momentum, sentiment, risk/reward and liquidity",
+        "A separate risk manager sizes every trade before anything executes",
+        "Stop-loss set at entry, half banked at +8%, a cash floor it can't breach, and a maximum hold it has to re-justify",
+        "Every trade logged with its reasoning, and a daily email of what it did and why",
+        "The rules change when the data says so: the profit target moved from +15% to +8% once it was clear no trade had ever reached +15%"
       ]
     },
     {
@@ -124,8 +137,8 @@
       "tag": "home",
       "status": "live",
       "statusLabel": "daily use",
-      "strapline": "A training coach that checks my own data before it tells me anything.",
-      "description": "My coach. Knows my training history, my weak points and every session I've logged. Five modes — log, review, plan, check, rehab. The bit I'm proudest of: before it does anything else it runs the arithmetic on my own data and tells me what's drifted — a skipped session, a stale flag, rehab that isn't going in, or a training block that quietly finished two weeks ago and I hadn't noticed. There's a phone app for logging sets at the rack, and it wrote the brief I took to my physio.",
+      "strapline": "A coach that remembers every session: annual and quarterly goals, the training block, injury rehab, and a phone app for the gym.",
+      "description": "My coach, and a continuous conversation rather than a one-off plan. Annual and quarterly goals, a training block that serves them, and injury rehab with its own progression ladder. Before it does anything else it runs the arithmetic on my own data and tells me what's drifted: a skipped session, rehab that isn't going in, or a block that quietly finished and needs re-planning. The session lands on a phone app before I get to the gym, and it wrote the brief I took to my physio.",
       "tags": [
         "claude code",
         "agent",
@@ -184,8 +197,8 @@
       "tag": "home",
       "status": "live",
       "statusLabel": "running daily",
-      "strapline": "What I drink, set against what my heart rate and sleep make of it.",
-      "description": "Correlates what I drink with what my body does about it — resting heart rate, HRV and sleep score, straight from Garmin. Dose-response curves, streak analysis, and the uncomfortable chart where the trend line meets the weekend. Guilt-as-a-service.",
+      "strapline": "Garmin sleep, heart rate and HRV, set against how I actually live.",
+      "description": "Pulls resting heart rate, HRV and sleep score straight from Garmin, and sets them against a simple daily log of lifestyle factors: exercise, travel, late caffeine, a night out. Insights come with a confidence level and a sample size, so it only tells me what the data can actually support. Plus charts, streaks and a history view.",
       "tags": [
         "python",
         "render",
@@ -205,7 +218,11 @@
         "tip": "check it most mornings"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/health-tracker-1-dashboard.png",
+        "images/health-tracker-2-charts.png",
+        "images/health-tracker-3-log.png"
+      ]
     },
     {
       "id": "outreach-board",
@@ -299,7 +316,7 @@
       "tag": "home",
       "status": "live",
       "statusLabel": "live on Railway",
-      "strapline": "A quiet inbox on rules I control, which replaced a paid subscription.",
+      "strapline": "Sorts my Gmail on rules I control, with a Chrome extension to change them in place, and replaced a paid subscription.",
       "description": "Self-hosted email triage that replaced a paid SaneBox subscription. Gmail pushes new mail through Pub/Sub to a service that sorts it on rules I control — whitelist, greylist, am-I-actually-a-recipient, bulk-mail detection. Two independent instances, one per mailbox, sharing only the code. Plus a Chrome extension so I can change a sender's rule without leaving the inbox.",
       "tags": [
         "node.js",
@@ -330,13 +347,13 @@
       "tag": "work",
       "status": "shipped",
       "statusLabel": "shipped",
-      "strapline": "A working booking journey on our own hotel API, built to show engineering what was possible.",
+      "strapline": "A working booking app on our own hotel API, built in two hours and fourteen prompts, then demoed to the dev team.",
       "bullets": [
         "Search, results, rooms, basket and book, end to end",
         "Built on our own Universal Hotel API, not a mock",
         "My first real build, made to start a conversation with the engineering team"
       ],
-      "outcome": "Their reaction was the whole point.",
+      "outcome": "Their reaction was the whole point. It has moved on a lot since this demo.",
       "tags": [
         "react",
         "vite",
@@ -356,8 +373,17 @@
         "score": 1,
         "tip": "served its purpose, archived"
       },
-      "link": null,
-      "images": []
+      "link": {
+        "url": "https://youtu.be/aS_sGYAVNNQ",
+        "label": "watch the 7-minute demo to the dev team (Feb 2026) →"
+      },
+      "images": [
+        "images/booking-engine-1-search.png",
+        "images/booking-engine-2-confirmed.png",
+        "images/booking-engine-3-product-database.png",
+        "images/booking-engine-4-built-with-claude.png"
+      ],
+      "video": "https://www.youtube-nocookie.com/embed/aS_sGYAVNNQ"
     },
     {
       "id": "maths-challenge",
@@ -396,7 +422,7 @@
       "tag": "home",
       "status": "shipped",
       "statusLabel": "played at home",
-      "strapline": "A 3D browser fighting game, rebuilt once they kept asking for more characters.",
+      "strapline": "A 3D fighting game in the browser, made for my boys.",
       "description": "A browser fighting game for my boys. Three.js, a physically-based rendering pipeline, a night arena and a broadcast-style HUD. Started as a weekend thing, then got rebuilt from the visuals up once they kept asking for more characters.",
       "tags": [
         "three.js",
@@ -417,37 +443,10 @@
         "tip": "weekends"
       },
       "link": null,
-      "images": []
-    },
-    {
-      "id": "realm-raiders",
-      "name": "realm-raiders",
-      "emoji": "🗺️",
-      "tag": "home",
-      "status": "active",
-      "statusLabel": "in progress",
-      "strapline": "A split-screen co-op adventure for two players on one laptop.",
-      "description": "Split-screen 3D co-op adventure for two players on one laptop. Procedural low-poly island, camera-relative movement, terrain and obstacle collision, character abilities. Built in phases from a written spec — walking skeleton first, structured so combat and characters bolt on cleanly afterwards.",
-      "tags": [
-        "three.js",
-        "javascript",
-        "3d",
-        "procedural"
-      ],
-      "effort": {
-        "score": 4,
-        "tip": "phased build, still going"
-      },
-      "value": {
-        "score": 3,
-        "tip": "they picked their own characters"
-      },
-      "usage": {
-        "score": 2,
-        "tip": "when we get a rainy afternoon"
-      },
-      "link": null,
-      "images": []
+      "images": [
+        "images/sonic-fighters-1.png",
+        "images/sonic-fighters-2.png"
+      ]
     },
     {
       "id": "beyblade-clash",
@@ -476,7 +475,10 @@
         "tip": "revived occasionally"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/beyblade-clash-1.png",
+        "images/beyblade-clash-2.png"
+      ]
     },
     {
       "id": "wordle-solver",
@@ -485,8 +487,8 @@
       "tag": "home",
       "status": "live",
       "statusLabel": "live on Render",
-      "strapline": "Suggests the Wordle guess that rules out the most answers.",
-      "description": "Wordle solver over the official NYT answer list. Feed it what you know and it suggests the guess that eliminates the most remaining possibilities. Deployed, so anyone can use it.",
+      "strapline": "One of my first builds, as a test: it suggests the guess that rules out the most answers. Try not to cheat.",
+      "description": "One of my first projects, and a test of the idea more than something I use. It works over the official answer list: feed it what you know and it suggests the guess that eliminates the most remaining possibilities. Deployed, so anyone can use it.",
       "tags": [
         "python",
         "flask",
@@ -503,36 +505,6 @@
       "usage": {
         "score": 2,
         "tip": "when i'm properly stuck"
-      },
-      "link": null,
-      "images": []
-    },
-    {
-      "id": "fitness-tracker",
-      "name": "fitness-tracker",
-      "emoji": "🏃",
-      "tag": "home",
-      "status": "retired",
-      "statusLabel": "superseded",
-      "strapline": "The first thing I ever deployed, and where I learned what deploying involves.",
-      "description": "Workout logger with reusable templates and a rest timer, deployed on Render with Postgres behind it. My first database-backed web app, and where I learned what deploying actually involves. Now superseded by the logging app inside fitness-mentor.",
-      "tags": [
-        "python",
-        "flask",
-        "postgres",
-        "render"
-      ],
-      "effort": {
-        "score": 3,
-        "tip": "first thing i ever deployed"
-      },
-      "value": {
-        "score": 2,
-        "tip": "did its job, then got replaced"
-      },
-      "usage": {
-        "score": 1,
-        "tip": "archived"
       },
       "link": null,
       "images": []

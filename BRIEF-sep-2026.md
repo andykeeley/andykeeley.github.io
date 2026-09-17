@@ -243,3 +243,38 @@ Update its bullets to match the diagram: connected to Gmail, Calendar and the EO
 ### Waiting on Andy
 - **health-tracker and investment-agent screenshots:** real personal data or dummy? Don't add new images for these until he says.
 - Hotel booking engine screenshots.
+
+---
+
+## 11. Round 3 additions (17-Sep, later)
+Already set in `projects.json` by the mentor-agent session:
+- **health-tracker** `images`: dashboard, charts, log (real data, Andy's choice)
+- **hotel booking engine** `images`: 4 stills from the Feb-2026 dev-team demo, plus `link` → the YouTube demo (unlisted) and an `outcome` noting it has moved on since
+- **investment-agent**: unchanged (keep the existing screenshot)
+
+To build:
+1. **Make the demo video prominent on the booking engine card**, not just a text link in the popup. On the card, show a small `▶ demo video` pill that opens the YouTube link in a new tab. In the popup, make the link look like a button. Open in a new tab with `rel="noopener"`.
+2. Every `popup-link` should open in a new tab.
+3. Optional: a YouTube embed (`https://www.youtube-nocookie.com/embed/aS_sGYAVNNQ`) as the last gallery item for the booking engine. Only do this if it's simple in the existing gallery, and fall back to the link.
+
+## 12. Round 4: signposting and breathing room (17-Sep, afternoon)
+
+**Already done in `projects.json` by the mentor-agent session. Don't redo:**
+- New straplines for mentor-agent (IQ 140 line back, with "Not a chatbot…" as the outcome), sorry-quick-q, investment-agent (plus new bullets), fitness-mentor, health-tracker, zenbox, sonic-fighters, wordle-solver and the hotel booking engine
+- Descriptions refreshed for health-tracker (no drinking emphasis), fitness-mentor and wordle-solver
+- **realm-raiders and fitness-tracker removed**
+- A simpler system diagram replaced `images/mentor-agent-0-system.png`
+- `images/sorry-quick-q-1.png` added (child's name blurred)
+- More screenshots are being added to `images/` (sonic, beyblade, maths, wordle, fitness-mentor). Wire them in when they exist; the file names follow `<project>-1.png`, `-2.png`.
+
+**To build (use `frontend-design`):**
+1. **A lead-in above the grid.** A short heading and one line: `things I've built` / `Tap any card to see how it works, with screenshots.` Visible, not grey.
+2. **Number the cards** 01, 02, 03… in array order. The order is deliberate (strongest first), so the numbers carry meaning. Small monospace number above or beside the name.
+3. **Bolder project names.** Set the name in the sans (Space Grotesk) at 600 weight, noticeably larger than now. Keep lower-case if it still reads as a name, but it must be the clear anchor of each card.
+4. **More separation between cards.** A larger grid gap (at least 24px desktop, 16px mobile) and a slightly firmer card edge (border or shadow) so each app reads as its own object.
+5. **The featured mentor-agent card needs to breathe.** Give the image more room, and give the strapline and outcome more whitespace. Don't crowd the meters.
+6. Section 11 items (demo video pill on the booking engine card, button-style popup links in a new tab, optional YouTube embed) are still to do.
+7. Check phone layout at 390px after all of the above.
+8. **Remove the GitHub link** from the header. Keep the email address only. (Delete `site.github` from projects.json and stop rendering it.)
+9. **Add a light aside directly under the intro**, in a smaller, quieter style than the intro (italic or monospace, not grey-on-grey):
+   *And, of course, this website was built in a couple of hours with a dollop of vision and a few good prompts.*
