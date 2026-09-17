@@ -170,3 +170,76 @@ The first pass is a big step forward: legible text, straplines working, work bef
 
 - `health-tracker`: keep, soften or drop. Leave it as it is until he decides.
 - Screenshots for the work cards (see section 5).
+
+---
+
+## 10. Round 3: one collection, ordered by strength (17-Sep, afternoon)
+
+**Andy's call, and it replaces the at work / at home split in section 3.** The best things he's built, apart from mentor-agent, are personal. They're also the most visual and the ones he uses daily. Leading with commercial tools that "look like anyone will have done similar" undersells the skill. The site becomes one collection that says **this guy gets AI and builds real things he actually uses**. The commercial argument goes in the LinkedIn post, not in the page structure.
+
+**The tinkering risk is handled by the ordering:** strongest and most used first, whatever the category. A small `work` or `home` tag on each card keeps the context.
+
+### Done already in this project (by the mentor-agent session)
+- mentor-agent `strapline` updated (below) and `images` set to: system diagram → today page → GTD terminal
+- New images in `images/`: `mentor-agent-0-system.png`, `outreach-board-1.png` (all dummy data)
+
+### Structure changes
+1. **Remove the two sections** (`sections.work` / `sections.home` and their framing lines). One grid.
+2. **Add a `tag` field** per project: `work` or `home`. Render it as a small quiet pill next to the status pill. Keep the meter key once, above the grid.
+3. **mentor-agent stays featured** at the top (full-width card).
+4. **Order** (use the `projects` array order):
+   1. mentor-agent (featured)
+   2. sorry-quick-q
+   3. investment-agent
+   4. fitness-mentor
+   5. anki-srs
+   6. health-tracker (see the note under "Waiting on Andy")
+   7. outreach board (new)
+   8. commercial toolkit (new, merged)
+   9. zenbox
+   10. hotel booking engine
+   11. maths-challenge
+   12. sonic-fighters
+   13. realm-raiders
+   14. beyblade-clash
+   15. wordle-solver
+   16. fitness-tracker
+5. **Intro:** trim the commercial-first framing. Suggested:
+   > I'm a commercial leader, not a developer. In February I started building with Claude Code, on the view that the tools had quietly become good enough for someone who understands the problem to build the fix themselves. Seven months on, some of it runs my working week and some of it runs the house. Most of it I use every day. The hard part was never the code. It was describing the problem properly, arguing with the output until it was right, and then actually using it.
+6. **Tagline:** `AI in commercial operations, and at home` → `built with Claude Code, and used every day`.
+
+### mentor-agent: new strapline (already in projects.json)
+*Not a chatbot. A system: my inbox, calendar, pipeline and customer files, organised so AI can actually run my week with me.*
+Update its bullets to match the diagram: connected to Gmail, Calendar and the EOS rocks store · structured memory (state handover, a lessons file of its own mistakes, GTD, pipeline, account files, knowledge base, daily journal) · one-letter commands and skills · morning and Friday rituals · outputs: today's plan, deal prep briefs, drafts, boards, design briefs.
+
+### New card: commercial toolkit (tag `work`)
+**Replaces five cards:** rfp builder, deal prep, deal sprint board, hubspot integration, customer-health-dashboard. Delete those five objects.
+- name: `commercial toolkit` · status: live · statusLabel: `in use`
+- strapline: *The commercial jobs I used to do by hand: RFPs, negotiation prep, the deal board, CRM hygiene and customer health.*
+- bullets:
+  - RFP builder: first-pass answers drafted from everything we've written before, with sources, and gaps left blank for a human
+  - Deal prep: a questioning agent that won't produce a brief until the value case, leverage, objections and ask are credible
+  - Deal sprint board: five gates per deal, with readiness calculated from the prep, never hand-set
+  - Customer health: one score per account, straight into the board pack
+  - HubSpot sync: CRM kept in line with the working pipeline (retired when the book got small)
+- outcome: *Each one took a recurring commercial job and made it faster and more consistent.*
+- tags: claude api · python · fastapi · node.js · hubspot api
+- effort/value/usage: take the highest of the five for effort, 4 value, 4 usage (Andy to adjust tooltips)
+- images, in order:
+  `images/rfp-builder-1-review.png`, `images/deal-prep-1-brief.png`, `images/deal-sprint-board-1.png`, `images/deal-sprint-board-2-prep.png`, `images/customer-health-1-summary.png`, `images/customer-health-2-priority.png`, `images/hubspot-integration-1-dry-run.png`, `images/rfp-builder-2-run.png`
+
+### New card: outreach board (tag `work`)
+- name: `outreach board` · status: live · statusLabel: `daily use`
+- strapline: *A job search run like a sales pipeline: every contact scored, staged, and with a clear view of whose move it is.*
+- bullets:
+  - Every person and role scored on desire × winnability, so the list doesn't quietly reorder itself around whatever's available
+  - Stages with a definition, not a feeling: "warm" means they advocate for you without being asked
+  - Whose move it is flips automatically when a chase date passes
+  - A weekly scorecard where the only leading indicator is conversations opened
+- outcome: *No warm lead goes cold because nobody noticed it was my move.*
+- tags: python · fastapi · yaml · claude code
+- images: `images/outreach-board-1.png`
+
+### Waiting on Andy
+- **health-tracker and investment-agent screenshots:** real personal data or dummy? Don't add new images for these until he says.
+- Hotel booking engine screenshots.

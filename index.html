@@ -110,27 +110,21 @@
 
   hr { border: none; border-top: 1px solid var(--faint); margin: 56px 0; }
 
-  /* SECTIONS */
-  .section { margin-bottom: 72px; }
-  .section-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
-  .section-title {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  .section-framing { font-size: 15px; color: var(--secondary); }
-  .small-title {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--secondary);
-    margin-bottom: 16px;
-  }
-
   /* CARDS */
   .grid { display: grid; gap: 20px; }
-  .grid-work { grid-template-columns: repeat(2, 1fr); }
-  .grid-home { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  /* one ranked list: text left, screenshot right when there is one */
+  .collection { grid-template-columns: 1fr; gap: 12px; margin-bottom: 72px; }
+  .collection .card:not(.featured) { display: grid; grid-template-columns: minmax(0, 1fr) 280px; }
+  .collection .card:not(.featured) .card-img { grid-column: 2; grid-row: 1; aspect-ratio: auto; min-height: 160px; border-left: 1px solid var(--faint); }
+  .collection .card:not(.featured) .card-img img { position: absolute; inset: 0; object-position: center; }
+  .collection .card:not(.featured) .card-body {
+    grid-column: 1; grid-row: 1;
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "top foot" "strap foot";
+    align-content: center; gap: 6px 32px; padding: 18px 24px;
+  }
+  .collection .card:not(.featured) .card-top { grid-area: top; justify-content: flex-start; }
+  .collection .card:not(.featured) .card-strap { grid-area: strap; font-size: 17px; max-width: 60ch; }
+  .collection .card:not(.featured) .card-foot { grid-area: foot; flex-direction: column; align-items: flex-end; justify-content: center; gap: 8px; margin: 0; padding: 0 0 0 24px; border-top: none; border-left: 1px solid var(--faint); }
 
   .card {
     background: var(--surface);
@@ -168,12 +162,13 @@
   .card-body { padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
   .card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
   .card-name { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
-  .card-strap { font-size: 18px; font-weight: 500; line-height: 1.4; color: var(--text); flex: 1; letter-spacing: -0.1px; }
+  .card-strap { font-size: 16px; font-weight: 500; line-height: 1.45; color: var(--text); flex: 1; }
+  .pills { display: flex; gap: 6px; flex-wrap: wrap; }
   .card-more { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--secondary); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--border-strong); }
   .card:hover .card-more { text-decoration-color: var(--text); color: var(--text); }
   .card-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--faint); }
 
-  /* featured: first work card spans the row */
+  /* featured: first card spans the row */
   .card.featured { grid-column: 1 / -1; flex-direction: row; }
   .card.featured .card-img { flex: 0 0 56%; aspect-ratio: auto; min-height: 320px; }
   .card.featured .card-body { padding: 28px 30px 22px; gap: 14px; }
@@ -182,11 +177,6 @@
   .card.featured.no-img .card-strap { max-width: 34ch; }
   .card.featured.no-img .card-outcome { max-width: 60ch; }
 
-  /* home cards: tighter, no image */
-  .card.compact .card-body { padding: 16px 18px 14px; gap: 8px; }
-  .card.compact .card-name { font-size: 13px; }
-  .card.compact .card-strap { font-size: 15px; font-weight: 400; color: var(--secondary); line-height: 1.5; }
-  .card.compact .card-foot { padding-top: 10px; }
   .emoji { font-size: 16px; line-height: 1; }
 
   /* STATUS PILL */
@@ -208,6 +198,8 @@
   .pill.s-active::before { background: var(--amber); }
   .pill.s-retired::before { background: transparent; border: 1px solid var(--muted); }
   .pill.s-retired { color: var(--muted); }
+  .pill.kind { border-color: transparent; background: var(--tag-bg); color: var(--secondary); font-weight: 400; }
+  .pill.kind::before { display: none; }
 
   .tag { font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 3px 10px; background: var(--tag-bg); border-radius: 100px; color: var(--secondary); }
 
@@ -243,7 +235,7 @@
   }
 
   /* METER KEY */
-  .meter-key { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: -8px 0 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--secondary); }
+  .meter-key { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--secondary); }
   .meter-key b { font-weight: 500; color: var(--text); }
 
   /* CLOSING */
@@ -316,7 +308,9 @@
   }
 
   @media (max-width: 900px) {
-    .grid-home { grid-template-columns: repeat(2, 1fr); }
+    .collection .card:not(.featured) { grid-template-columns: minmax(0, 1fr) 220px; }
+    .collection .card:not(.featured) .card-body { grid-template-columns: minmax(0, 1fr); grid-template-areas: "top" "strap" "foot"; }
+    .collection .card:not(.featured) .card-foot { flex-direction: row; align-items: flex-end; justify-content: space-between; padding: 10px 0 0; border-left: none; border-top: 1px solid var(--faint); }
     .card.featured { flex-direction: column; }
     .card.featured .card-img { flex: none; aspect-ratio: 16 / 10; min-height: 0; }
   }
@@ -326,8 +320,12 @@
     .header h1 { font-size: 24px; }
     .intro { margin-bottom: 48px; }
     .intro p { font-size: 16px; }
-    .grid-work, .grid-home { grid-template-columns: 1fr; }
-    .card-strap, .card.featured .card-strap { font-size: 18px; }
+    .collection .card:not(.featured) { grid-template-columns: minmax(0, 1fr); }
+    .collection .card:not(.featured) .card-img { grid-column: 1; grid-row: 1; aspect-ratio: 16 / 10; min-height: 0; border-left: none; }
+    .collection .card:not(.featured) .card-img img { position: absolute; inset: 0; object-position: center; }
+  .collection .card:not(.featured) .card-body { grid-row: 2; display: flex; padding: 16px 18px 14px; gap: 8px; }
+    .collection .card:not(.featured) .card-foot { flex-direction: row; align-items: flex-end; justify-content: space-between; padding: 10px 0 0; border-left: none; border-top: 1px solid var(--faint); }
+    .card.featured .card-strap { font-size: 20px; }
     .card.featured .card-body { padding: 18px 20px 16px; }
     .card-foot { flex-wrap: wrap; }
     .popup { padding: 0; }
@@ -403,6 +401,11 @@ function meters(p) {
     </div>`).join('')}</div>`;
 }
 
+function pills(p) {
+  const kind = p.tag ? `<span class="pill kind">${esc(p.tag)}</span>` : '';
+  return `<span class="pills">${pill(p)}${kind}</span>`;
+}
+
 function pill(p) {
   const cls = { live: 's-live', active: 's-active', retired: 's-retired' }[p.status] || 's-shipped';
   return `<span class="pill ${cls}">${esc(p.statusLabel)}</span>`;
@@ -416,7 +419,7 @@ function nameWithEmoji(p) {
   return `<span class="card-name"><span class="emoji" aria-hidden="true">${p.emoji}</span>${esc(p.name)}</span>`;
 }
 
-function renderWorkCard(p, i) {
+function renderCard(p, i) {
   const imgs = imagesOf(p);
   // no screenshots: no image area at all; it comes back when images are added
   const img = imgs.length
@@ -427,21 +430,10 @@ function renderWorkCard(p, i) {
     <article ${cardAttrs(p, (featured ? 'featured ' : '') + (imgs.length ? '' : 'no-img'))}>
       ${img}
       <div class="card-body">
-        <div class="card-top">${nameWithEmoji(p)}${pill(p)}</div>
-        <p class="card-strap">${esc(p.strapline)}</p>
+        <div class="card-top">${nameWithEmoji(p)}${pills(p)}</div>
+        <p class="card-strap">${esc(p.strapline || p.description)}</p>
         ${featured && p.outcome ? `<p class="card-outcome">${esc(p.outcome)}</p>` : ''}
         <div class="card-foot">${meters(p)}<span class="card-more">details</span></div>
-      </div>
-    </article>`;
-}
-
-function renderHomeCard(p) {
-  return `
-    <article ${cardAttrs(p, 'compact')}>
-      <div class="card-body">
-        <div class="card-top">${nameWithEmoji(p)}${pill(p)}</div>
-        <p class="card-strap">${esc(p.strapline || p.description)}</p>
-        <div class="card-foot">${meters(p)}</div>
       </div>
     </article>`;
 }
@@ -460,13 +452,6 @@ function meterKey(text) {
 
 function render(data) {
   const s = data.site;
-  const sections = data.sections || {};
-  const work = data.projects.filter(p => p.section === 'work');
-  const home = data.projects.filter(p => p.section !== 'work');
-  const head = (key, fallback) => {
-    const sec = sections[key] || { title: fallback };
-    return `<div class="section-head"><h2 class="section-title">${esc(sec.title)}</h2>${sec.framing ? `<p class="section-framing">${esc(sec.framing)}</p>` : ''}</div>`;
-  };
   return `
     <header class="header">
       <h1>${esc(s.title)}</h1>
@@ -480,15 +465,9 @@ function render(data) {
 
     <div class="intro">${data.intro.split(/\n\n+/).map(para => `<p>${esc(para)}</p>`).join('')}</div>
 
-    <section class="section">
-      ${head('work', 'at work')}
-      ${meterKey((sections.work || {}).key)}
-      <div class="grid grid-work">${work.map(renderWorkCard).join('')}</div>
-    </section>
-
-    <section class="section">
-      ${head('home', 'at home')}
-      <div class="grid grid-home">${home.map(renderHomeCard).join('')}</div>
+    <section aria-label="Projects">
+      ${meterKey(data.meterKey)}
+      <div class="grid collection">${data.projects.map(renderCard).join('')}</div>
     </section>
 
     ${data.closing ? `<p class="closing">${simpleMarkdown(esc(data.closing))}</p>` : ''}
@@ -526,7 +505,7 @@ function renderPopup(p) {
   return `
     ${galleryHtml}
     <div class="popup-info${imgs.length ? '' : ' no-gallery'}">
-      <div class="popup-top"><span class="popup-name" id="popup-name">${imgs.length ? '' : `<span class="emoji" aria-hidden="true">${p.emoji}</span>`}${esc(p.name)}</span>${pill(p)}</div>
+      <div class="popup-top"><span class="popup-name" id="popup-name">${imgs.length ? '' : `<span class="emoji" aria-hidden="true">${p.emoji}</span>`}${esc(p.name)}</span>${pills(p)}</div>
       <p class="popup-strap">${esc(p.strapline)}</p>
       ${body}
       ${p.outcome ? `<p class="popup-outcome">${esc(p.outcome)}</p>` : ''}
