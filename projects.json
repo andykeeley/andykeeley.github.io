@@ -1,16 +1,15 @@
 {
   "site": {
     "title": "things i've built",
-    "tagline": "built with Claude Code, and used every day",
+    "tagline": "built with Claude Code, and actually used",
     "name": "Andy Keeley",
     "role": "commercial leader · not a developer",
     "email": "andy.keeley@gmail.com",
     "updated": "17 september 2026"
   },
-  "intro": "I'm a commercial leader, not a developer. In February I started building with Claude Code, on the view that the tools had quietly become good enough for someone who understands the problem to build the fix themselves. Seven months on, some of it runs my working week and some of it runs the house. Most of it I use every day. The hard part was never the code. It was describing the problem properly, arguing with the output until it was right, and then actually using it.\n\nAt home, my kids have worked out that if they can describe it, we can build it.",
+  "intro": "I'm a commercial leader, not a developer. In February I started building with Claude Code, because the tools had quietly become good enough for someone who understands a problem to build the fix. Seven months on, some of it runs my working week, some of it runs the house, and most of it I use every day. The hard part was never the code. It was describing the problem properly, arguing with the output until it was right, and then actually using it.\n\nAt home, my kids have worked out that if they can describe it, we can build it.",
   "introAside": "And, of course, this website was built in a couple of hours with a dollop of vision and a few good prompts.",
   "leadIn": {
-    "title": "things I've built",
     "line": "Tap any card to see how it works, with screenshots."
   },
   "meterKey": "effort = how long it took to build · value = what it's worth to me · usage = how often it's used",
@@ -24,11 +23,11 @@
       "statusLabel": "daily use",
       "strapline": "A chief of staff with an IQ of 140, sitting on my shoulder.",
       "bullets": [
-        "Connected to Gmail, Google Calendar and the EOS rocks store",
-        "Structured memory in plain files: a handover from the last session, a lessons file of its own mistakes, GTD, the pipeline, one file per customer, a knowledge base and a daily journal",
-        "One-letter commands and skills, so capturing something or checking the week costs nothing",
-        "Rituals it runs with me: every morning, every Friday, and before every negotiation",
-        "What comes out: today's plan, deal prep briefs, drafts, boards and design briefs"
+        "Connected to Gmail, Google Calendar and my quarterly goals",
+        "A memory of plain files it reads and writes: where we left off, a lessons file of its own mistakes, my projects and actions, the pipeline, one file per customer, a knowledge base and a daily journal",
+        "One-letter commands, so capturing a thought or checking the week takes seconds",
+        "Routines it runs with me: every morning, every Friday, and before every negotiation",
+        "What comes out: today's plan, deal prep briefs, drafts in my voice, dashboards and design briefs"
       ],
       "outcome": "Not a chatbot. A system that knows my inbox, calendar, pipeline and customers.",
       "tags": [
@@ -65,7 +64,7 @@
       "status": "live",
       "statusLabel": "in use at home",
       "strapline": "Every school letter, newsletter, WhatsApp forward and noticeboard photo in one deployed AI. Ask it anything.",
-      "description": "A knowledge base built from the boys' school comms — letters, newsletters, WhatsApp forwards, photos of a noticeboard — answering \"what kit does he need Thursday?\" at 7am, instead of asking the group chat. School comms constantly overwrite themselves, so nothing is ever deleted: new facts supersede old ones, but only if the source outranks what it replaces — a parent's forward can't retire the school's own letter. Citations resolve by ID so the model can't invent a source, and \"I don't know\" is a first-class answer.",
+      "description": "A knowledge base built from my kids' school comms — letters, newsletters, WhatsApp forwards, photos of a noticeboard — answering \"what kit does he need on Thursday?\" at 7am, instead of asking the group chat. School comms constantly overwrite themselves, so nothing is ever deleted: new facts supersede old ones, but only if the source outranks what it replaces — a parent's forward can't retire the school's own letter. Citations resolve by ID so the model can't invent a source, and \"I don't know\" is a first-class answer.",
       "tags": [
         "next.js",
         "typescript",
@@ -112,7 +111,7 @@
       },
       "value": {
         "score": 4,
-        "tip": "up 16.4% since the reset, unsupervised"
+        "tip": "real money, and rules it has to follow"
       },
       "usage": {
         "score": 5,
@@ -151,7 +150,7 @@
       },
       "value": {
         "score": 5,
-        "tip": "replaced a coach i was paying for"
+        "tip": "the plan, the rehab and the accountability in one place"
       },
       "usage": {
         "score": 5,
@@ -170,8 +169,8 @@
       "tag": "home",
       "status": "live",
       "statusLabel": "running locally",
-      "strapline": "Spaced repetition built properly, for paintings, capitals and commercial fundamentals.",
-      "description": "Spaced repetition built properly — SM-2 scheduling, four-button grading, and an append-only review log so I can swap the algorithm out later without losing history. Card types are pluggable, so one deck of famous paintings became decks for capitals, flags, US states, life philosophies and commercial fundamentals.",
+      "strapline": "Spaced repetition built properly, for anything worth remembering.",
+      "description": "Spaced repetition built properly: SM-2 scheduling, four-button grading, and an append-only review log so the algorithm can be swapped later without losing history. Card types are pluggable, so a new deck on any subject takes minutes.",
       "tags": [
         "python",
         "fastapi",
@@ -187,8 +186,8 @@
         "tip": "the commercial deck earns its keep"
       },
       "usage": {
-        "score": 3,
-        "tip": "most days, briefly"
+        "score": 4,
+        "tip": "every day, a few minutes"
       },
       "link": null,
       "images": [
@@ -219,8 +218,8 @@
         "tip": "actually changed my behaviour"
       },
       "usage": {
-        "score": 4,
-        "tip": "check it most mornings"
+        "score": 5,
+        "tip": "every morning"
       },
       "link": null,
       "images": [
@@ -236,8 +235,9 @@
       "tag": "work",
       "status": "live",
       "statusLabel": "daily use",
-      "strapline": "A job search run like a sales pipeline: every contact scored, staged, and with a clear view of whose move it is.",
+      "strapline": "A job search run like a sales pipeline, and wired into my mentor agent: every contact scored, staged, and with a clear view of whose move it is.",
       "bullets": [
+        "Linked to my mentor agent, which reads and updates the cards as conversations happen, so the board is never out of date",
         "Every person and role scored on desire × winnability, so the list doesn't quietly reorder itself around whatever's available",
         "Stages with a definition, not a feeling: \"warm\" means they advocate for you without being asked",
         "Whose move it is flips automatically when a chase date passes",
@@ -276,11 +276,11 @@
       "statusLabel": "in use",
       "strapline": "The commercial jobs I used to do by hand: RFPs, negotiation prep, the deal board, CRM hygiene and customer health.",
       "bullets": [
-        "RFP builder: first-pass answers drafted from everything we've written before, with sources, and gaps left blank for a human",
+        "RFP builder: first-pass answers drafted from every past bid, with sources, and gaps left blank for a human",
         "Deal prep: a questioning agent that won't produce a brief until the value case, leverage, objections and ask are credible",
         "Deal sprint board: five gates per deal, with readiness calculated from the prep, never hand-set",
         "Customer health: one score per account, straight into the board pack",
-        "HubSpot sync: CRM kept in line with the working pipeline (retired when the book got small)"
+        "HubSpot sync: the CRM kept in line with the working pipeline (retired once the pipeline was small enough to run by hand)"
       ],
       "outcome": "Each one took a recurring commercial job and made it faster and more consistent.",
       "tags": [
@@ -354,10 +354,10 @@
       "tag": "work",
       "status": "shipped",
       "statusLabel": "shipped",
-      "strapline": "A working booking app on our own hotel API, built in two hours and fourteen prompts, then demoed to the dev team.",
+      "strapline": "A working booking app on intuitive's iVectorOne API, built in two hours and fourteen prompts, then demoed to the dev team.",
       "bullets": [
         "Search, results, rooms, basket and book, end to end",
-        "Built on our own Universal Hotel API, not a mock",
+        "Built on intuitive's real iVectorOne API, not a mock",
         "My first real build, made to start a conversation with the engineering team"
       ],
       "outcome": "Their reaction was the whole point. It has moved on a lot since this demo.",
@@ -369,8 +369,8 @@
         "rest api"
       ],
       "effort": {
-        "score": 5,
-        "tip": "my first real build, steep learning curve"
+        "score": 3,
+        "tip": "two hours of prompting, but all of it new to me"
       },
       "value": {
         "score": 4,
@@ -466,7 +466,7 @@
       "status": "shipped",
       "statusLabel": "shipped",
       "strapline": "A Beyblade battle in the browser, built in an evening because they asked.",
-      "description": "Two-to-three player Beyblade battle in the browser. Spin physics, collisions, stadium walls, hand-drawn bey art. Built in an evening because they asked.",
+      "description": "Two-to-three player Beyblade battles in the browser: spin physics, collisions, stadium walls and hand-drawn bey art.",
       "tags": [
         "javascript",
         "canvas",
@@ -497,7 +497,7 @@
       "tag": "home",
       "status": "live",
       "statusLabel": "live on Render",
-      "strapline": "One of my first builds, as a test: it suggests the guess that rules out the most answers. Try not to cheat.",
+      "strapline": "One of my first builds: it suggests the guess that rules out the most answers. Try not to cheat.",
       "description": "One of my first projects, and a test of the idea more than something I use. It works over the official answer list: feed it what you know and it suggests the guess that eliminates the most remaining possibilities. Deployed, so anyone can use it.",
       "tags": [
         "python",
@@ -522,5 +522,5 @@
       ]
     }
   ],
-  "closing": "If you've got a problem that feels like it should be software but you don't have developers to build it — [get in touch](mailto:andy.keeley@gmail.com). I might be able to help."
+  "closing": "If you've got a problem that feels like it should be software, but no developers to build it, [get in touch](mailto:andy.keeley@gmail.com). I might be able to help."
 }

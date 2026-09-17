@@ -116,7 +116,8 @@
 
   .lead-in { margin-bottom: 14px; }
   .lead-in h2 { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: -0.3px; line-height: 1.3; }
-  .lead-in p { font-size: 17px; color: var(--text); margin-top: 4px; }
+  .lead-in p { font-size: 17px; color: var(--text); }
+  .lead-in h2 + p { margin-top: 4px; }
 
   hr { border: none; border-top: 1px solid var(--faint); margin: 56px 0; }
 
@@ -508,8 +509,8 @@ function render(data) {
     <div class="intro">${data.intro.split(/\n\n+/).map(para => `<p>${esc(para)}</p>`).join('')}</div>
     ${data.introAside ? `<p class="intro-aside">${esc(data.introAside)}</p>` : ''}
 
-    <section aria-labelledby="lead-in-title">
-      ${data.leadIn ? `<div class="lead-in"><h2 id="lead-in-title">${esc(data.leadIn.title)}</h2>${data.leadIn.line ? `<p>${esc(data.leadIn.line)}</p>` : ''}</div>` : ''}
+    <section aria-label="Projects">
+      ${data.leadIn ? `<div class="lead-in">${data.leadIn.title ? `<h2>${esc(data.leadIn.title)}</h2>` : ''}${data.leadIn.line ? `<p>${esc(data.leadIn.line)}</p>` : ''}</div>` : ''}
       ${meterKey(data.meterKey)}
       <div class="grid collection">${data.projects.map(renderCard).join('')}</div>
     </section>
