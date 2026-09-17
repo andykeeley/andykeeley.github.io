@@ -58,7 +58,11 @@
         "tip": "every single work day"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/mentor-agent-1-today.png",
+        "images/mentor-agent-2-gtd.png",
+        "images/deal-prep-1-brief.png"
+      ]
     },
     {
       "id": "rfp-builder",
@@ -92,7 +96,10 @@
         "tip": "whenever a bid lands"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/rfp-builder-1-review.png",
+        "images/rfp-builder-2-run.png"
+      ]
     },
     {
       "id": "deal-prep",
@@ -125,7 +132,10 @@
         "tip": "before every negotiation that matters"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/deal-prep-1-brief.png",
+        "images/deal-sprint-board-2-prep.png"
+      ]
     },
     {
       "id": "customer-health-dashboard",
@@ -159,7 +169,10 @@
         "tip": "monthly, when the reports land"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/customer-health-1-summary.png",
+        "images/customer-health-2-priority.png"
+      ]
     },
     {
       "id": "deal-sprint-board",
@@ -193,7 +206,10 @@
         "tip": "the length of one quarter's sprint"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/deal-sprint-board-1.png",
+        "images/deal-sprint-board-2-prep.png"
+      ]
     },
     {
       "id": "hotel-booking-app",
@@ -262,7 +278,9 @@
         "tip": "weekly, until it wasn't needed"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/hubspot-integration-1-dry-run.png"
+      ]
     },
     {
       "id": "school-brain",
