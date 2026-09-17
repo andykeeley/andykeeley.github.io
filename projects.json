@@ -1,28 +1,49 @@
 {
   "site": {
-    "title": "stuff i made",
-    "tagline": "things i've built with claude code",
+    "title": "things i've built",
+    "tagline": "AI in commercial operations, and at home",
     "name": "Andy Keeley",
-    "role": "CCO at a travel tech company · not a developer",
+    "role": "commercial leader · not a developer",
     "email": "andy.keeley@gmail.com",
     "github": "https://github.com/andykeeley",
-    "updated": "september 2026"
+    "updated": "17 september 2026"
   },
-  "intro": "I started using Claude Code in Feb-26. I work in a tech company, but i'm the commercial guy. I understand the ecosystem, but have never written a line of code.\n\nSeven months later, there are seventeen things on this page. One runs my working week. One trades real money every day without asking me. One is a maths game my nine-year-olds actually ask to play. They were all built the same way: describe the problem properly, argue with the output until it's right, ship it, then keep using it until it breaks.\n\nThe hard part was never the code.",
+  "intro": "I'm a commercial leader, not a developer. In February I started building with Claude Code, on the view that the tools had quietly become good enough for someone who understands the problem to build the fix themselves. Seven months on, it's how I prepare for negotiations, answer RFPs, keep the CRM honest and run my week. The hard part was never the code. It was describing the problem properly, arguing with the output until it was right, and then actually using it.\n\nAt home, my kids have worked out that if they can describe it, we can build it.",
+  "sections": {
+    "work": {
+      "title": "at work",
+      "framing": "Commercial problems first. The technology is whatever got the job done."
+    },
+    "home": {
+      "title": "at home",
+      "framing": "Mostly built because someone at home asked for it."
+    }
+  },
   "projects": [
     {
       "id": "mentor-agent",
       "name": "mentor-agent",
       "emoji": "🧠",
+      "section": "work",
       "status": "live",
-      "statusLabel": "daily driver",
+      "statusLabel": "daily use",
+      "strapline": "A chief of staff with an IQ of 140, sitting on my shoulder.",
+      "bullets": [
+        "Reads my calendar and inbox every morning and tells me what actually matters today, not just what's loudest",
+        "Runs my GTD system and EOS rocks, and holds me to account when something slips",
+        "Captures every loose end, and keeps track of what I'm still waiting on from other people",
+        "Prepares me for every negotiation with a structured six-part deal prep",
+        "Second pair of eyes on contracts and addenda, clause by clause, before they go to the lawyers",
+        "Writes the briefs that get outstanding results out of Claude Design"
+      ],
+      "outcome": "Nothing gets dropped, and every hard conversation starts prepared.",
       "description": "The hub everything else plugs into. Runs my week on GTD and EOS — rocks, weekly scorecard, pipeline, reviews. Reads my calendar and inbox over MCP, holds context on every customer account, and has a Deal Prep mode I use before commercial negotiations. Six single-letter shell commands so capture never has a friction cost.",
       "tags": [
         "claude code",
         "mcp",
         "gmail",
         "google calendar",
-        "gtd/eos"
+        "python"
       ],
       "effort": {
         "score": 5,
@@ -37,101 +58,156 @@
         "tip": "every single work day"
       },
       "link": null,
-      "image": null
+      "images": []
     },
     {
-      "id": "school-brain",
-      "name": "sorry-quick-q",
-      "emoji": "🎒",
+      "id": "rfp-builder",
+      "name": "rfp builder",
+      "emoji": "📑",
+      "section": "work",
       "status": "live",
-      "statusLabel": "in use at home",
-      "description": "A knowledge base built from the boys' school comms — letters, newsletters, WhatsApp forwards, photos of a noticeboard — answering \"what kit does he need Thursday?\" at 7am, instead of asking the group chat. School comms constantly overwrite themselves, so nothing is ever deleted: new facts supersede old ones, but only if the source outranks what it replaces — a parent's forward can't retire the school's own letter. Citations resolve by ID so the model can't invent a source, and \"I don't know\" is a first-class answer.",
+      "statusLabel": "in use",
+      "strapline": "Every RFP answer drafted from what we've actually said and delivered before, so the week goes on the win strategy.",
+      "bullets": [
+        "Builds one corpus from past proposals, RFI answers, product documents and the security questionnaire",
+        "Drafts each answer from that corpus, and lists the sources it used",
+        "Marks every question direct, partial or gap, and leaves the gaps blank for a human to write properly"
+      ],
+      "outcome": "More consistent answers, and the time goes into the ones that win the bid, not retyping the ones we've written twenty times.",
       "tags": [
-        "next.js",
-        "typescript",
         "claude api",
-        "rag",
-        "clerk auth"
-      ],
-      "effort": {
-        "score": 4,
-        "tip": "two repos, and a week of arguing about supersession"
-      },
-      "value": {
-        "score": 5,
-        "tip": "answers it before i have to ask the group chat"
-      },
-      "usage": {
-        "score": 4,
-        "tip": "most school mornings"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "investment-agent",
-      "name": "investment-agent",
-      "emoji": "📈",
-      "status": "live",
-      "statusLabel": "live · real money",
-      "description": "Autonomous trading agent. Scans the crypto market, scores candidates on momentum, sentiment, risk/reward and liquidity, sizes the position through a risk manager, executes on Kraken, and emails me a daily digest of what it did and why. The interesting part isn't the trading — it's the rules it can't talk itself out of: stop-loss set at entry, a hard cash floor, a maximum hold it has to re-underwrite. Runs unattended.",
-      "tags": [
         "python",
-        "railway",
-        "kraken api",
-        "react dashboard",
-        "resend"
-      ],
-      "effort": {
-        "score": 4,
-        "tip": "weekends and evenings over ~3 weeks, still tuning"
-      },
-      "value": {
-        "score": 4,
-        "tip": "up 16.4% since the reset, unsupervised"
-      },
-      "usage": {
-        "score": 5,
-        "tip": "runs itself, every day"
-      },
-      "link": null,
-      "image": "images/investment-agent.png"
-    },
-    {
-      "id": "zenbox",
-      "name": "zenbox",
-      "emoji": "📥",
-      "status": "live",
-      "statusLabel": "live on Railway",
-      "description": "Self-hosted email triage that replaced a paid SaneBox subscription. Gmail pushes new mail through Pub/Sub to a service that sorts it on rules I control — whitelist, greylist, am-I-actually-a-recipient, bulk-mail detection. Two independent instances, one per mailbox, sharing only the code. Plus a Chrome extension so I can change a sender's rule without leaving the inbox.",
-      "tags": [
-        "node.js",
-        "railway",
-        "gmail api",
-        "pub/sub",
-        "chrome extension"
+        "document corpus"
       ],
       "effort": {
         "score": 3,
-        "tip": "a week of evenings"
+        "tip": "two months of tuning on a real bid"
       },
       "value": {
         "score": 4,
-        "tip": "cancelled the subscription, kept the quiet inbox"
+        "tip": "the first draft stops being the hard part"
+      },
+      "usage": {
+        "score": 3,
+        "tip": "whenever a bid lands"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "deal-prep",
+      "name": "deal prep",
+      "emoji": "🎯",
+      "section": "work",
+      "status": "live",
+      "statusLabel": "in use",
+      "strapline": "Six questions answered before every negotiation, every time.",
+      "bullets": [
+        "A questioning agent that won't produce anything until it has the value case, the narrative, the facts to hand, the leverage, the likely objections and the ask",
+        "Produces a one-page brief to take into the room",
+        "Three levels of challenge, from guiding to radical candour, depending on what's at stake"
+      ],
+      "outcome": "No negotiation starts on instinct alone.",
+      "tags": [
+        "claude code skill",
+        "yaml"
+      ],
+      "effort": {
+        "score": 3,
+        "tip": "rewritten every time a negotiation taught me something"
+      },
+      "value": {
+        "score": 4,
+        "tip": "i walk in knowing my walk-away"
       },
       "usage": {
         "score": 5,
-        "tip": "every message that arrives"
+        "tip": "before every negotiation that matters"
       },
       "link": null,
-      "image": null
+      "images": []
+    },
+    {
+      "id": "deal-sprint-board",
+      "name": "deal sprint board",
+      "emoji": "🗂️",
+      "section": "work",
+      "status": "shipped",
+      "statusLabel": "shipped",
+      "strapline": "Every open deal, its stage and whether we're genuinely ready to close, on one screen.",
+      "bullets": [
+        "One board across every deal in the quarter's sprint",
+        "Each deal shows five gates (committed, proven, priced, timed, clear) plus a readiness spine drawn from its deal prep",
+        "Readiness is calculated from the gaps, never hand-set, so it can't go stale"
+      ],
+      "outcome": "The pipeline conversation starts from evidence, not optimism.",
+      "tags": [
+        "python",
+        "fastapi",
+        "yaml"
+      ],
+      "effort": {
+        "score": 3,
+        "tip": "started as one html file, grew a server"
+      },
+      "value": {
+        "score": 3,
+        "tip": "hard to argue with a red gate"
+      },
+      "usage": {
+        "score": 2,
+        "tip": "the length of one quarter's sprint"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "hubspot-integration",
+      "name": "hubspot integration",
+      "emoji": "🔁",
+      "section": "work",
+      "status": "retired",
+      "statusLabel": "retired",
+      "strapline": "The CRM kept in line with the real pipeline, without the Friday-afternoon admin.",
+      "bullets": [
+        "Pulled open deals from HubSpot and reconciled them against the working pipeline",
+        "Pushed changes back with a dry run first, so nothing moved in the CRM without being seen",
+        "A separate verification check to prove a deal had landed as intended"
+      ],
+      "outcome": "Retired when the book got small enough to manage directly.",
+      "tags": [
+        "node.js",
+        "hubspot api"
+      ],
+      "effort": {
+        "score": 2,
+        "tip": "a few scripts and a lot of field mapping"
+      },
+      "value": {
+        "score": 3,
+        "tip": "killed the friday-afternoon admin while it lasted"
+      },
+      "usage": {
+        "score": 3,
+        "tip": "weekly, until it wasn't needed"
+      },
+      "link": null,
+      "images": []
     },
     {
       "id": "customer-health-dashboard",
       "name": "customer-health-dashboard",
       "emoji": "📊",
-      "status": "active",
-      "statusLabel": "in use at work",
+      "section": "work",
+      "status": "live",
+      "statusLabel": "in use",
+      "strapline": "Every customer's health on one page, straight into the board pack.",
+      "bullets": [
+        "Reads the customer hub exports and aged debt reports",
+        "Weights them into a single health score across the whole customer portfolio",
+        "Renders a dashboard that goes straight into the board pack"
+      ],
+      "outcome": "Replaced a manual process that used to eat an afternoon.",
       "description": "Reads CCO Hub exports and aged debt reports, weights them into a single health score across the whole customer portfolio, and renders a dashboard I can take straight into a board pack. Replaced a manual process that used to eat an afternoon.",
       "tags": [
         "python",
@@ -151,263 +227,22 @@
         "tip": "monthly, when the reports land"
       },
       "link": null,
-      "image": null
-    },
-    {
-      "id": "ar-collections-copilot",
-      "name": "ar-collections-copilot",
-      "emoji": "💷",
-      "status": "active",
-      "statusLabel": "in use at work",
-      "description": "Turns the weekly AR ledger into an execution-ready collections plan. Prioritises accounts on value and risk, drafts the chase, recommends the escalation path, and remembers every payment promise and whether it was kept. Deliberately advisory — it recommends, a human sends. Goal: 60-day debtor ratio from ~40% to under 10%.",
-      "tags": [
-        "prompt engineering",
-        "finance",
-        "automation"
-      ],
-      "effort": {
-        "score": 2,
-        "tip": "mostly prompt work"
-      },
-      "value": {
-        "score": 4,
-        "tip": "debt ratio moving the right way"
-      },
-      "usage": {
-        "score": 3,
-        "tip": "weekly debt review sessions"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "fitness-mentor",
-      "name": "fitness-mentor",
-      "emoji": "🏋️",
-      "status": "live",
-      "statusLabel": "daily driver",
-      "description": "My coach. Knows my training history, my weak points and every session I've logged. Five modes — log, review, plan, check, rehab. The bit I'm proudest of: before it does anything else it runs the arithmetic on my own data and tells me what's drifted — a skipped session, a stale flag, rehab that isn't going in, or a training block that quietly finished two weeks ago and I hadn't noticed. There's a phone app for logging sets at the rack, and it wrote the brief I took to my physio.",
-      "tags": [
-        "claude code",
-        "agent",
-        "pwa",
-        "garmin"
-      ],
-      "effort": {
-        "score": 4,
-        "tip": "restructured twice as i worked out what i needed"
-      },
-      "value": {
-        "score": 5,
-        "tip": "replaced a coach i was paying for"
-      },
-      "usage": {
-        "score": 5,
-        "tip": "every training session"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "health-tracker",
-      "name": "health-tracker",
-      "emoji": "🫀",
-      "status": "live",
-      "statusLabel": "running daily",
-      "description": "Correlates what I drink with what my body does about it — resting heart rate, HRV and sleep score, straight from Garmin. Dose-response curves, streak analysis, and the uncomfortable chart where the trend line meets the weekend. Guilt-as-a-service.",
-      "tags": [
-        "python",
-        "render",
-        "garmin api",
-        "data viz"
-      ],
-      "effort": {
-        "score": 2,
-        "tip": "surprisingly quick to build"
-      },
-      "value": {
-        "score": 5,
-        "tip": "actually changed my behaviour"
-      },
-      "usage": {
-        "score": 4,
-        "tip": "check it most mornings"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "maths-challenge",
-      "name": "maths-challenge",
-      "emoji": "➗",
-      "status": "live",
-      "statusLabel": "in use by two nine-year-olds",
-      "description": "Maths practice for my boys, disguised as a fighting game. Eight Key Stage 2 topics; each round is a match against an opponent with a health bar, a super meter that rewards streaks, and a rank stamp at the end. Nothing in it reads as losing — that was a design rule. There's a second area of trials modelled on their school's cognitive assessment. The save file has no reset button, on purpose: their history is the only record of what they've played, and the only input for tuning the difficulty.",
-      "tags": [
-        "javascript",
-        "no build step",
-        "localstorage",
-        "game design"
-      ],
-      "effort": {
-        "score": 4,
-        "tip": "the most iterated thing i've built"
-      },
-      "value": {
-        "score": 5,
-        "tip": "they ask to play it"
-      },
-      "usage": {
-        "score": 4,
-        "tip": "school nights"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "anki-srs",
-      "name": "anki-srs",
-      "emoji": "🗂️",
-      "status": "live",
-      "statusLabel": "running locally",
-      "description": "Spaced repetition built properly — SM-2 scheduling, four-button grading, and an append-only review log so I can swap the algorithm out later without losing history. Card types are pluggable, so one deck of famous paintings became decks for capitals, flags, US states, life philosophies and commercial fundamentals.",
-      "tags": [
-        "python",
-        "fastapi",
-        "sqlite",
-        "sm-2"
-      ],
-      "effort": {
-        "score": 3,
-        "tip": "a weekend, then kept extending it"
-      },
-      "value": {
-        "score": 3,
-        "tip": "the commercial deck earns its keep"
-      },
-      "usage": {
-        "score": 3,
-        "tip": "most days, briefly"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "sonic-fighters",
-      "name": "sonic-fighters",
-      "emoji": "🎮",
-      "status": "shipped",
-      "statusLabel": "played at home",
-      "description": "A browser fighting game for my boys. Three.js, a physically-based rendering pipeline, a night arena and a broadcast-style HUD. Started as a weekend thing, then got rebuilt from the visuals up once they kept asking for more characters.",
-      "tags": [
-        "three.js",
-        "javascript",
-        "3d",
-        "game loop"
-      ],
-      "effort": {
-        "score": 4,
-        "tip": "rebuilt once i knew what good looked like"
-      },
-      "value": {
-        "score": 3,
-        "tip": "pure dad currency"
-      },
-      "usage": {
-        "score": 3,
-        "tip": "weekends"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "realm-raiders",
-      "name": "realm-raiders",
-      "emoji": "🗺️",
-      "status": "active",
-      "statusLabel": "in progress",
-      "description": "Split-screen 3D co-op adventure for two players on one laptop. Procedural low-poly island, camera-relative movement, terrain and obstacle collision, character abilities. Built in phases from a written spec — walking skeleton first, structured so combat and characters bolt on cleanly afterwards.",
-      "tags": [
-        "three.js",
-        "javascript",
-        "3d",
-        "procedural"
-      ],
-      "effort": {
-        "score": 4,
-        "tip": "phased build, still going"
-      },
-      "value": {
-        "score": 3,
-        "tip": "they picked their own characters"
-      },
-      "usage": {
-        "score": 2,
-        "tip": "when we get a rainy afternoon"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "beyblade-clash",
-      "name": "beyblade-clash",
-      "emoji": "🌀",
-      "status": "shipped",
-      "statusLabel": "shipped",
-      "description": "Two-to-three player Beyblade battle in the browser. Spin physics, collisions, stadium walls, hand-drawn bey art. Built in an evening because they asked.",
-      "tags": [
-        "javascript",
-        "canvas",
-        "physics"
-      ],
-      "effort": {
-        "score": 2,
-        "tip": "one evening"
-      },
-      "value": {
-        "score": 2,
-        "tip": "instant hit, short half-life"
-      },
-      "usage": {
-        "score": 2,
-        "tip": "revived occasionally"
-      },
-      "link": null,
-      "image": null
-    },
-    {
-      "id": "not-so-fast",
-      "name": "not-so-fast",
-      "emoji": "🚧",
-      "status": "shipped",
-      "statusLabel": "installed",
-      "description": "A Chrome extension that makes you earn access to distracting sites. Reach for the wrong tab and it puts a typing challenge in the way — long enough that the impulse has usually passed by the time you finish.",
-      "tags": [
-        "chrome extension",
-        "javascript",
-        "manifest v3"
-      ],
-      "effort": {
-        "score": 1,
-        "tip": "an afternoon"
-      },
-      "value": {
-        "score": 3,
-        "tip": "works, annoyingly well"
-      },
-      "usage": {
-        "score": 4,
-        "tip": "every time i reach for the wrong tab"
-      },
-      "link": null,
-      "image": null
+      "images": []
     },
     {
       "id": "hotel-booking-app",
-      "name": "hotel-booking-app",
+      "name": "hotel booking engine",
       "emoji": "🏨",
+      "section": "work",
       "status": "shipped",
       "statusLabel": "shipped",
+      "strapline": "A working booking journey on our own hotel API, built to show engineering what was possible.",
+      "bullets": [
+        "Search, results, rooms, basket and book, end to end",
+        "Built on our own Universal Hotel API, not a mock",
+        "My first real build, made to start a conversation with the engineering team"
+      ],
+      "outcome": "Their reaction was the whole point.",
       "description": "Full-stack booking app built on our Universal Hotel API — search, results, rooms, basket, book. Built to show our engineering team what Claude Code could do. Their reaction was the whole point.",
       "tags": [
         "react",
@@ -429,14 +264,320 @@
         "tip": "served its purpose, archived"
       },
       "link": null,
-      "image": null
+      "images": []
+    },
+    {
+      "id": "school-brain",
+      "name": "sorry-quick-q",
+      "emoji": "🎒",
+      "section": "home",
+      "status": "live",
+      "statusLabel": "in use at home",
+      "strapline": "The answer to \"what kit does he need on Thursday?\" at 7am, without asking the group chat.",
+      "description": "A knowledge base built from the boys' school comms — letters, newsletters, WhatsApp forwards, photos of a noticeboard — answering \"what kit does he need Thursday?\" at 7am, instead of asking the group chat. School comms constantly overwrite themselves, so nothing is ever deleted: new facts supersede old ones, but only if the source outranks what it replaces — a parent's forward can't retire the school's own letter. Citations resolve by ID so the model can't invent a source, and \"I don't know\" is a first-class answer.",
+      "tags": [
+        "next.js",
+        "typescript",
+        "claude api",
+        "rag",
+        "clerk auth"
+      ],
+      "effort": {
+        "score": 4,
+        "tip": "two repos, and a week of arguing about supersession"
+      },
+      "value": {
+        "score": 5,
+        "tip": "answers it before i have to ask the group chat"
+      },
+      "usage": {
+        "score": 4,
+        "tip": "most school mornings"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "investment-agent",
+      "name": "investment-agent",
+      "emoji": "📈",
+      "section": "home",
+      "status": "live",
+      "statusLabel": "live · real money",
+      "strapline": "A trading agent with rules it can't talk itself out of, running on real money.",
+      "description": "Autonomous trading agent. Scans the crypto market, scores candidates on momentum, sentiment, risk/reward and liquidity, sizes the position through a risk manager, executes on Kraken, and emails me a daily digest of what it did and why. The interesting part isn't the trading — it's the rules it can't talk itself out of: stop-loss set at entry, a hard cash floor, a maximum hold it has to re-underwrite. Runs unattended.",
+      "tags": [
+        "python",
+        "railway",
+        "kraken api",
+        "react dashboard",
+        "resend"
+      ],
+      "effort": {
+        "score": 4,
+        "tip": "weekends and evenings over ~3 weeks, still tuning"
+      },
+      "value": {
+        "score": 4,
+        "tip": "up 16.4% since the reset, unsupervised"
+      },
+      "usage": {
+        "score": 5,
+        "tip": "runs itself, every day"
+      },
+      "link": null,
+      "images": [
+        "images/investment-agent.png"
+      ]
+    },
+    {
+      "id": "zenbox",
+      "name": "zenbox",
+      "emoji": "📥",
+      "section": "home",
+      "status": "live",
+      "statusLabel": "live on Railway",
+      "strapline": "A quiet inbox on rules I control, which replaced a paid subscription.",
+      "description": "Self-hosted email triage that replaced a paid SaneBox subscription. Gmail pushes new mail through Pub/Sub to a service that sorts it on rules I control — whitelist, greylist, am-I-actually-a-recipient, bulk-mail detection. Two independent instances, one per mailbox, sharing only the code. Plus a Chrome extension so I can change a sender's rule without leaving the inbox.",
+      "tags": [
+        "node.js",
+        "railway",
+        "gmail api",
+        "pub/sub",
+        "chrome extension"
+      ],
+      "effort": {
+        "score": 3,
+        "tip": "a week of evenings"
+      },
+      "value": {
+        "score": 4,
+        "tip": "cancelled the subscription, kept the quiet inbox"
+      },
+      "usage": {
+        "score": 5,
+        "tip": "every message that arrives"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "fitness-mentor",
+      "name": "fitness-mentor",
+      "emoji": "🏋️",
+      "section": "home",
+      "status": "live",
+      "statusLabel": "daily use",
+      "strapline": "A training coach that checks my own data before it tells me anything.",
+      "description": "My coach. Knows my training history, my weak points and every session I've logged. Five modes — log, review, plan, check, rehab. The bit I'm proudest of: before it does anything else it runs the arithmetic on my own data and tells me what's drifted — a skipped session, a stale flag, rehab that isn't going in, or a training block that quietly finished two weeks ago and I hadn't noticed. There's a phone app for logging sets at the rack, and it wrote the brief I took to my physio.",
+      "tags": [
+        "claude code",
+        "agent",
+        "pwa",
+        "garmin"
+      ],
+      "effort": {
+        "score": 4,
+        "tip": "restructured twice as i worked out what i needed"
+      },
+      "value": {
+        "score": 5,
+        "tip": "replaced a coach i was paying for"
+      },
+      "usage": {
+        "score": 5,
+        "tip": "every training session"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "health-tracker",
+      "name": "health-tracker",
+      "emoji": "🫀",
+      "section": "home",
+      "status": "live",
+      "statusLabel": "running daily",
+      "strapline": "What I drink, set against what my heart rate and sleep make of it.",
+      "description": "Correlates what I drink with what my body does about it — resting heart rate, HRV and sleep score, straight from Garmin. Dose-response curves, streak analysis, and the uncomfortable chart where the trend line meets the weekend. Guilt-as-a-service.",
+      "tags": [
+        "python",
+        "render",
+        "garmin api",
+        "data viz"
+      ],
+      "effort": {
+        "score": 2,
+        "tip": "surprisingly quick to build"
+      },
+      "value": {
+        "score": 5,
+        "tip": "actually changed my behaviour"
+      },
+      "usage": {
+        "score": 4,
+        "tip": "check it most mornings"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "maths-challenge",
+      "name": "maths-challenge",
+      "emoji": "➗",
+      "section": "home",
+      "status": "live",
+      "statusLabel": "in use by two nine-year-olds",
+      "strapline": "Maths practice for two nine-year-olds, disguised as a fighting game.",
+      "description": "Maths practice for my boys, disguised as a fighting game. Eight Key Stage 2 topics; each round is a match against an opponent with a health bar, a super meter that rewards streaks, and a rank stamp at the end. Nothing in it reads as losing — that was a design rule. There's a second area of trials modelled on their school's cognitive assessment. The save file has no reset button, on purpose: their history is the only record of what they've played, and the only input for tuning the difficulty.",
+      "tags": [
+        "javascript",
+        "no build step",
+        "localstorage",
+        "game design"
+      ],
+      "effort": {
+        "score": 4,
+        "tip": "the most iterated thing i've built"
+      },
+      "value": {
+        "score": 5,
+        "tip": "they ask to play it"
+      },
+      "usage": {
+        "score": 4,
+        "tip": "school nights"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "anki-srs",
+      "name": "anki-srs",
+      "emoji": "🗂️",
+      "section": "home",
+      "status": "live",
+      "statusLabel": "running locally",
+      "strapline": "Spaced repetition built properly, for paintings, capitals and commercial fundamentals.",
+      "description": "Spaced repetition built properly — SM-2 scheduling, four-button grading, and an append-only review log so I can swap the algorithm out later without losing history. Card types are pluggable, so one deck of famous paintings became decks for capitals, flags, US states, life philosophies and commercial fundamentals.",
+      "tags": [
+        "python",
+        "fastapi",
+        "sqlite",
+        "sm-2"
+      ],
+      "effort": {
+        "score": 3,
+        "tip": "a weekend, then kept extending it"
+      },
+      "value": {
+        "score": 3,
+        "tip": "the commercial deck earns its keep"
+      },
+      "usage": {
+        "score": 3,
+        "tip": "most days, briefly"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "sonic-fighters",
+      "name": "sonic-fighters",
+      "emoji": "🎮",
+      "section": "home",
+      "status": "shipped",
+      "statusLabel": "played at home",
+      "strapline": "A 3D browser fighting game, rebuilt once they kept asking for more characters.",
+      "description": "A browser fighting game for my boys. Three.js, a physically-based rendering pipeline, a night arena and a broadcast-style HUD. Started as a weekend thing, then got rebuilt from the visuals up once they kept asking for more characters.",
+      "tags": [
+        "three.js",
+        "javascript",
+        "3d",
+        "game loop"
+      ],
+      "effort": {
+        "score": 4,
+        "tip": "rebuilt once i knew what good looked like"
+      },
+      "value": {
+        "score": 3,
+        "tip": "pure dad currency"
+      },
+      "usage": {
+        "score": 3,
+        "tip": "weekends"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "realm-raiders",
+      "name": "realm-raiders",
+      "emoji": "🗺️",
+      "section": "home",
+      "status": "active",
+      "statusLabel": "in progress",
+      "strapline": "A split-screen co-op adventure for two players on one laptop.",
+      "description": "Split-screen 3D co-op adventure for two players on one laptop. Procedural low-poly island, camera-relative movement, terrain and obstacle collision, character abilities. Built in phases from a written spec — walking skeleton first, structured so combat and characters bolt on cleanly afterwards.",
+      "tags": [
+        "three.js",
+        "javascript",
+        "3d",
+        "procedural"
+      ],
+      "effort": {
+        "score": 4,
+        "tip": "phased build, still going"
+      },
+      "value": {
+        "score": 3,
+        "tip": "they picked their own characters"
+      },
+      "usage": {
+        "score": 2,
+        "tip": "when we get a rainy afternoon"
+      },
+      "link": null,
+      "images": []
+    },
+    {
+      "id": "beyblade-clash",
+      "name": "beyblade-clash",
+      "emoji": "🌀",
+      "section": "home",
+      "status": "shipped",
+      "statusLabel": "shipped",
+      "strapline": "A Beyblade battle in the browser, built in an evening because they asked.",
+      "description": "Two-to-three player Beyblade battle in the browser. Spin physics, collisions, stadium walls, hand-drawn bey art. Built in an evening because they asked.",
+      "tags": [
+        "javascript",
+        "canvas",
+        "physics"
+      ],
+      "effort": {
+        "score": 2,
+        "tip": "one evening"
+      },
+      "value": {
+        "score": 2,
+        "tip": "instant hit, short half-life"
+      },
+      "usage": {
+        "score": 2,
+        "tip": "revived occasionally"
+      },
+      "link": null,
+      "images": []
     },
     {
       "id": "wordle-solver",
       "name": "wordle-solver",
       "emoji": "🔤",
+      "section": "home",
       "status": "live",
       "statusLabel": "live on Render",
+      "strapline": "Suggests the Wordle guess that rules out the most answers.",
       "description": "Wordle solver over the official NYT answer list. Feed it what you know and it suggests the guess that eliminates the most remaining possibilities. Deployed, so anyone can use it.",
       "tags": [
         "python",
@@ -456,14 +597,16 @@
         "tip": "when i'm properly stuck"
       },
       "link": null,
-      "image": null
+      "images": []
     },
     {
       "id": "fitness-tracker",
       "name": "fitness-tracker",
       "emoji": "🏃",
-      "status": "shipped",
+      "section": "home",
+      "status": "retired",
       "statusLabel": "superseded",
+      "strapline": "The first thing I ever deployed, and where I learned what deploying involves.",
       "description": "Workout logger with reusable templates and a rest timer, deployed on Render with Postgres behind it. My first database-backed web app, and where I learned what deploying actually involves. Now superseded by the logging app inside fitness-mentor.",
       "tags": [
         "python",
@@ -484,7 +627,7 @@
         "tip": "archived"
       },
       "link": null,
-      "image": null
+      "images": []
     }
   ],
   "backlog": [
@@ -515,7 +658,7 @@
     }
   ],
   "notes": [
-    "I'm a CCO, not a developer. My background is commercial — ARR growth, account management, contract negotiations. I started building because I had problems nobody else was going to solve.",
+    "I'm a commercial leader, not a developer. My background is ARR growth, account management and contract negotiation. I started building because I had problems nobody else was going to solve.",
     "Every project here was built by describing what I wanted to Claude Code in plain English, iterating on the output, and deploying it. The stack listed on each card is what Claude Code chose, not what I specified.",
     "The hard part was never the code. It's knowing which problem is actually worth solving, being specific about what 'done' looks like, and being honest when something isn't working and needs rebuilding. That's the same job I do commercially — it just has a terminal attached.",
     "If you've got a problem that feels like it should be software but you don't have developers to build it — [get in touch](mailto:andy.keeley@gmail.com). I might be able to help."
