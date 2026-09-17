@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>things i've built</title>
 <meta name="description" content="Andy Keeley: AI in commercial operations, and at home. Built with Claude Code by a commercial leader who isn't a developer.">
+<!-- visitor stats: GoatCounter, cookieless -->
+<script data-goatcounter="https://andykeeley.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -573,6 +575,13 @@ function renderPopup(p) {
     </div>`;
 }
 
+// records an event in GoatCounter; does nothing if the script is blocked or hasn't loaded
+function track(path, title) {
+  const send = () => window.goatcounter && window.goatcounter.count && window.goatcounter.count({ path, title, event: true });
+  if (window.goatcounter && window.goatcounter.count) send();
+  else window.addEventListener('load', send, { once: true });
+}
+
 function openPopup(id, { updateHash = true } = {}) {
   const p = DATA.projects.find(x => x.id === id);
   if (!p) return;
@@ -588,6 +597,7 @@ function openPopup(id, { updateHash = true } = {}) {
   panel.scrollTop = 0;
   panel.focus({ preventScroll: true });
   if (updateHash) history.replaceState(null, '', '#' + id);
+  track('open-' + id, 'Opened ' + p.name);
 }
 
 function closePopup() {
@@ -626,6 +636,14 @@ function openFromHash() {
 
 function wireUp() {
   const app = document.getElementById('app');
+  // outbound links (demo video pill, popup buttons)
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[target="_blank"]');
+    const card = a && a.closest('[data-id]');
+    const id = card ? card.dataset.id : (location.hash.slice(1) || 'page');
+    if (a) track('link-' + id, 'Link: ' + a.textContent.trim());
+  });
+
   app.addEventListener('click', e => {
     if (e.target.closest('a')) return;
     const card = e.target.closest('.card');
