@@ -12,7 +12,8 @@
   "sections": {
     "work": {
       "title": "at work",
-      "framing": "Commercial problems first. The technology is whatever got the job done."
+      "framing": "Commercial problems first. The technology is whatever got the job done.",
+      "key": "effort = how long it took to build · value = what it's worth to me · usage = how often it's used"
     },
     "home": {
       "title": "at home",
@@ -37,7 +38,6 @@
         "Writes the briefs that get outstanding results out of Claude Design"
       ],
       "outcome": "Nothing gets dropped, and every hard conversation starts prepared.",
-      "description": "The hub everything else plugs into. Runs my week on GTD and EOS — rocks, weekly scorecard, pipeline, reviews. Reads my calendar and inbox over MCP, holds context on every customer account, and has a Deal Prep mode I use before commercial negotiations. Six single-letter shell commands so capture never has a friction cost.",
       "tags": [
         "claude code",
         "mcp",
@@ -128,6 +128,40 @@
       "images": []
     },
     {
+      "id": "customer-health-dashboard",
+      "name": "customer-health-dashboard",
+      "emoji": "📊",
+      "section": "work",
+      "status": "live",
+      "statusLabel": "in use",
+      "strapline": "Every customer's health on one page, straight into the board pack.",
+      "bullets": [
+        "Reads the customer hub exports and aged debt reports",
+        "Weights them into a single health score across the whole customer portfolio",
+        "Renders a dashboard that goes straight into the board pack"
+      ],
+      "outcome": "Replaced a manual process that used to eat an afternoon.",
+      "tags": [
+        "python",
+        "excel parsing",
+        "html dashboard"
+      ],
+      "effort": {
+        "score": 3,
+        "tip": "a couple of afternoons"
+      },
+      "value": {
+        "score": 4,
+        "tip": "goes into every board pack"
+      },
+      "usage": {
+        "score": 3,
+        "tip": "monthly, when the reports land"
+      },
+      "link": null,
+      "images": []
+    },
+    {
       "id": "deal-sprint-board",
       "name": "deal sprint board",
       "emoji": "🗂️",
@@ -162,6 +196,42 @@
       "images": []
     },
     {
+      "id": "hotel-booking-app",
+      "name": "hotel booking engine",
+      "emoji": "🏨",
+      "section": "work",
+      "status": "shipped",
+      "statusLabel": "shipped",
+      "strapline": "A working booking journey on our own hotel API, built to show engineering what was possible.",
+      "bullets": [
+        "Search, results, rooms, basket and book, end to end",
+        "Built on our own Universal Hotel API, not a mock",
+        "My first real build, made to start a conversation with the engineering team"
+      ],
+      "outcome": "Their reaction was the whole point.",
+      "tags": [
+        "react",
+        "vite",
+        "node.js",
+        "sqlite",
+        "rest api"
+      ],
+      "effort": {
+        "score": 5,
+        "tip": "my first real build, steep learning curve"
+      },
+      "value": {
+        "score": 4,
+        "tip": "proved the concept to the team"
+      },
+      "usage": {
+        "score": 1,
+        "tip": "served its purpose, archived"
+      },
+      "link": null,
+      "images": []
+    },
+    {
       "id": "hubspot-integration",
       "name": "hubspot integration",
       "emoji": "🔁",
@@ -190,78 +260,6 @@
       "usage": {
         "score": 3,
         "tip": "weekly, until it wasn't needed"
-      },
-      "link": null,
-      "images": []
-    },
-    {
-      "id": "customer-health-dashboard",
-      "name": "customer-health-dashboard",
-      "emoji": "📊",
-      "section": "work",
-      "status": "live",
-      "statusLabel": "in use",
-      "strapline": "Every customer's health on one page, straight into the board pack.",
-      "bullets": [
-        "Reads the customer hub exports and aged debt reports",
-        "Weights them into a single health score across the whole customer portfolio",
-        "Renders a dashboard that goes straight into the board pack"
-      ],
-      "outcome": "Replaced a manual process that used to eat an afternoon.",
-      "description": "Reads CCO Hub exports and aged debt reports, weights them into a single health score across the whole customer portfolio, and renders a dashboard I can take straight into a board pack. Replaced a manual process that used to eat an afternoon.",
-      "tags": [
-        "python",
-        "excel parsing",
-        "html dashboard"
-      ],
-      "effort": {
-        "score": 3,
-        "tip": "a couple of afternoons"
-      },
-      "value": {
-        "score": 4,
-        "tip": "goes into every board pack"
-      },
-      "usage": {
-        "score": 3,
-        "tip": "monthly, when the reports land"
-      },
-      "link": null,
-      "images": []
-    },
-    {
-      "id": "hotel-booking-app",
-      "name": "hotel booking engine",
-      "emoji": "🏨",
-      "section": "work",
-      "status": "shipped",
-      "statusLabel": "shipped",
-      "strapline": "A working booking journey on our own hotel API, built to show engineering what was possible.",
-      "bullets": [
-        "Search, results, rooms, basket and book, end to end",
-        "Built on our own Universal Hotel API, not a mock",
-        "My first real build, made to start a conversation with the engineering team"
-      ],
-      "outcome": "Their reaction was the whole point.",
-      "description": "Full-stack booking app built on our Universal Hotel API — search, results, rooms, basket, book. Built to show our engineering team what Claude Code could do. Their reaction was the whole point.",
-      "tags": [
-        "react",
-        "vite",
-        "node.js",
-        "sqlite",
-        "rest api"
-      ],
-      "effort": {
-        "score": 5,
-        "tip": "my first real build, steep learning curve"
-      },
-      "value": {
-        "score": 4,
-        "tip": "proved the concept to the team"
-      },
-      "usage": {
-        "score": 1,
-        "tip": "served its purpose, archived"
       },
       "link": null,
       "images": []
@@ -630,37 +628,5 @@
       "images": []
     }
   ],
-  "backlog": [
-    {
-      "title": "Client onboarding automator",
-      "description": "Auto-generate implementation timelines, contract checklists, and welcome packs from CRM data",
-      "tag": "work"
-    },
-    {
-      "title": "Competitor pricing monitor",
-      "description": "Scrape and compare hotel pricing across OTAs, surface anomalies, alert on significant shifts",
-      "tag": "work"
-    },
-    {
-      "title": "Contract clause checker",
-      "description": "Review inbound contracts against our standard terms and flag every deviation before it reaches legal",
-      "tag": "work"
-    },
-    {
-      "title": "Family meal planner",
-      "description": "Weekly meal plans based on dietary preferences, generates shopping lists, syncs with calendar",
-      "tag": "personal"
-    },
-    {
-      "title": "Kid's coding curriculum builder",
-      "description": "Structured programming lessons that build toward game modding, auto-adapts to progress",
-      "tag": "personal"
-    }
-  ],
-  "notes": [
-    "I'm a commercial leader, not a developer. My background is ARR growth, account management and contract negotiation. I started building because I had problems nobody else was going to solve.",
-    "Every project here was built by describing what I wanted to Claude Code in plain English, iterating on the output, and deploying it. The stack listed on each card is what Claude Code chose, not what I specified.",
-    "The hard part was never the code. It's knowing which problem is actually worth solving, being specific about what 'done' looks like, and being honest when something isn't working and needs rebuilding. That's the same job I do commercially — it just has a terminal attached.",
-    "If you've got a problem that feels like it should be software but you don't have developers to build it — [get in touch](mailto:andy.keeley@gmail.com). I might be able to help."
-  ]
+  "closing": "If you've got a problem that feels like it should be software but you don't have developers to build it — [get in touch](mailto:andy.keeley@gmail.com). I might be able to help."
 }

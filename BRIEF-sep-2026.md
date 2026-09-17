@@ -143,3 +143,30 @@ Build the gallery so cards work with zero, one or many images.
 
 - Title, tagline and role line wording
 - Is Magpie (the AI product priced and sold to customers) a card? It's the strongest commercial story, but it's intuitive's product, so it would need careful wording.
+
+---
+
+## 8. Round 2: review of the live site (17-Sep, afternoon)
+
+The first pass is a big step forward: legible text, straplines working, work before home, mentor-agent leading. These fixes are in priority order. Keep using `frontend-design` for 1 and 4.
+
+**Before Monday's post**
+
+1. **Work cards look unfinished.** Every work card has a large grey image area holding only an emoji, while the home cards (no image area) look tidier. **When a card has no images, collapse or hide the image area.** Keep the emoji small next to the name, as the home cards do. When screenshots are added later, the image area comes back automatically. This applies to the featured mentor-agent card too.
+2. **The "notes" section repeats the intro** ("not a developer", "the hard part was never the code"). Remove the first three notes. Keep only the last one ("If you've got a problem that feels like it should be software but you don't have developers to build it — get in touch. I might be able to help.") and make it the closing line of the page, visible but not shouty.
+3. **Remove the backlog section.** The items have no `name` (so the headings render blank) and they don't help the site's argument. Delete the `backlog` array, or stop rendering it.
+4. **Mobile check.** A 390px-wide render showed text and cards cut off on the right (header role line, intro, cards). It may be a headless-browser artefact, but verify at 360–390px: no horizontal scroll, the header line wraps, cards fit the width, and the popup and gallery work full-screen.
+
+**Worth doing**
+
+5. **Reorder the work section:** mentor-agent · rfp builder · deal prep · customer-health-dashboard · deal sprint board · hotel booking engine · hubspot integration (retired goes last).
+6. **Meter key.** "Effort" at 5/5 in red can read as "hard work" or "expensive" to a commercial reader, and the tooltips don't work on touch. Add a one-line key near the first section, e.g. `effort = how long it took to build · value = what it's worth to me · usage = how often it's used`, or make the tooltips tappable.
+
+**Tidy (no visible change)**
+
+7. Remove the legacy `description` fields from work cards that now have `bullets` (mentor-agent, customer-health-dashboard, hotel booking engine). They aren't rendered, and the mentor-agent one carries old copy.
+
+**Waiting on Andy (don't change yet)**
+
+- `health-tracker`: keep, soften or drop. Leave it as it is until he decides.
+- Screenshots for the work cards (see section 5).
