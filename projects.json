@@ -158,7 +158,10 @@
         "tip": "every training session"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/fitness-mentor-1.png",
+        "images/fitness-mentor-2.png"
+      ]
     },
     {
       "id": "anki-srs",
@@ -188,7 +191,9 @@
         "tip": "most days, briefly"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/anki-srs-1.png"
+      ]
     },
     {
       "id": "health-tracker",
@@ -338,7 +343,9 @@
         "tip": "every message that arrives"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/zenbox-1.png"
+      ]
     },
     {
       "id": "hotel-booking-app",
@@ -510,7 +517,9 @@
         "tip": "when i'm properly stuck"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/wordle-solver-1.png"
+      ]
     }
   ],
   "closing": "If you've got a problem that feels like it should be software but you don't have developers to build it — [get in touch](mailto:andy.keeley@gmail.com). I might be able to help."
