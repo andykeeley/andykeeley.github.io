@@ -413,7 +413,10 @@
         "tip": "school nights"
       },
       "link": null,
-      "images": []
+      "images": [
+        "images/maths-challenge-1.png",
+        "images/maths-challenge-2.png"
+      ]
     },
     {
       "id": "sonic-fighters",
